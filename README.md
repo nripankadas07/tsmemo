@@ -12,7 +12,7 @@ custom keys, and in-flight call de-duplication.
 ## Install
 
 ```bash
-npm install tsmemo
+npm install && npm run build
 ```
 
 ## Quick start
