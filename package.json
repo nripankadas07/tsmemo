@@ -4,13 +4,26 @@
   "description": "Type-safe memoize for sync and async functions with TTL, LRU eviction, custom keys, and in-flight call de-duplication.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "files": ["dist", "README.md", "LICENSE"],
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
   "scripts": {
     "build": "tsc -p tsconfig.build.json",
     "test": "jest",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "pretest": "node --test dependency-audit.test.cjs"
   },
-  "keywords": ["memoize", "cache", "lru", "ttl", "typescript", "async", "decorator"],
+  "keywords": [
+    "memoize",
+    "cache",
+    "lru",
+    "ttl",
+    "typescript",
+    "async",
+    "decorator"
+  ],
   "author": "nripankadas07",
   "license": "MIT",
   "devDependencies": {
@@ -18,5 +31,10 @@
     "jest": "^30.5.2",
     "ts-jest": "^29.4.14",
     "typescript": "^5.4.0"
+  },
+  "overrides": {
+    "js-yaml": {
+      "argparse": "2.0.1"
+    }
   }
 }
